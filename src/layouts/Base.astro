@@ -8,7 +8,10 @@ interface Props {
   description?: string;
 }
 
-const { title = "Your New Business", description = "AI Tool Directory for Enterprise businesses" } = Astro.props;
+const {
+  title = "Stackwise — Enterprise AI Intelligence Platform",
+  description = "Stackwise curates 14,000+ AI tools with compliance, security, and ROI data enterprise buyers need. Built for CIOs, IT procurement, and digital transformation leaders."
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -18,18 +21,21 @@ const { title = "Your New Business", description = "AI Tool Directory for Enterp
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
     <title>{title}</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Your New Business",
-      "description": "AI Tool Directory for Enterprise businesses",
-      "url": "https://enterprise-ai-tools-1.onrender.com"
+      "name": "Stackwise",
+      "description": "Enterprise AI Intelligence Platform — 14,000+ AI tools curated with compliance, security, and ROI data for enterprise buyers.",
+      "url": "https://enterprise-ai-tools-1.onrender.com",
+      "keywords": ["enterprise AI tools", "AI tool directory", "AI procurement", "enterprise software curation", "AI compliance", "technology intelligence"]
     }
     </script>
   </head>
-  <body class="min-h-screen flex flex-col bg-surface-50 text-surface-900 font-body antialiased">
+  <body class="min-h-screen flex flex-col bg-[oklch(0.17_0.06_250)] text-[oklch(0.92_0.012_250)] font-body antialiased">
     <Header />
     <main class="flex-1">
       <slot />
